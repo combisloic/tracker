@@ -1,0 +1,49 @@
+{
+  "editor.rulers": [100],
+  "search.exclude": {
+    // Build output
+    "**/dist": true,
+    // npm packages
+    "**/node_modules": true,
+    // Code coverage
+    "**/coverage": true,
+    // Intellij platform IDE files
+    "**/.idea": true,
+    // AOT compiled code
+    "**/compiled": true,
+    // awesome-typescript-loader cache files
+    "**/.awcache": true,
+    // "**/*.js": true,
+    "**/*.css": true,
+    // documentation files
+    "**/documentation": true
+  },
+  "files.exclude": {
+    // "**/*.css": true,
+    "config/**/*.js": true,
+    "config/**/*.js.map": true,
+    // "src/**/*.js": true,
+    "src/**/*.js.map": true,
+    "**/*.awcache": true
+  },
+
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "prettier.ignorePath": ".prettierignore",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  }
+}

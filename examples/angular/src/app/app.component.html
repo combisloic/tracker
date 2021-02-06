@@ -1,0 +1,36 @@
+<header class="header">
+  <span class="header__lhs">
+    Tracker: Angular Example
+  </span>
+  <span class="header__rhs">
+    coucou
+  </span>
+</header>
+
+<main class="main">
+  <h1>Events</h1>
+
+  <button
+    [attr.track-type]="{
+      idk: 'test',
+      other: 'ok'
+    }"
+    [attr.track-data]="events"
+    track-position="button" 
+    (click)="click($event)">
+    WITH ATTRIBUTES
+  </button>
+
+  <button
+    (click)="click($event)">
+    NO ATTRIBUTE
+  </button>
+
+  <ul class="main__list">
+    <li 
+      *ngFor="let event of events"
+      class="main__item">
+      {{ event.type }}
+    </li>
+  </ul>
+</main>
