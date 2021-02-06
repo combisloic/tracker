@@ -169,6 +169,7 @@ export class Tracker extends EventEmitter {
       });
 
       const trackerEvent: TrackerEvent = {
+        timestamp: Date.now(),
         type: Array.isArray(event) ? 'mutation' : event.type,
         event: event,
         ua: this.uaParser.getResult(),
@@ -187,6 +188,7 @@ export class Tracker extends EventEmitter {
        */
 
       const trackerEvent: TrackerEvent = {
+        timestamp: Date.now(),
         type: 'mutation',
         event: mutation,
         ua: this.uaParser.getResult(),
